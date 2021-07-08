@@ -1,0 +1,31 @@
+{
+  "name": "birthday-project",
+  "version": "1.0.0",
+  "description": "It's my birthday!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cursorweb/14th-Birthday-Project.git"
+  },
+  "keywords": [
+    "Birthday",
+    "14",
+    "JavaScript",
+    "Coder100",
+    "Cookie"
+  ],
+  "author": "Coder100",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cursorweb/14th-Birthday-Project/issues"
+  },
+  "homepage": "https://github.com/cursorweb/14th-Birthday-Project#readme",
+  "dependencies": {
+    "@replit/database": "^2.0.1",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1"
+  }
+}
