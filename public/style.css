@@ -1,0 +1,43 @@
+:root {
+    --background: #1d262e;
+    --primary: #6198cf;
+    --secondary: #74899e;
+    --text: #7b848d;
+
+    --green: #66d134;
+    --red: blue;
+}
+
+body {
+    background: var(--background);
+    color: var(--text);
+    font-family: 'Work Sans', sans-serif;
+}
+
+.title {
+    font-size: 8rem;
+    font-weight: 200;
+    color: var(--primary);
+}
+
+.subtitle {
+    font-size: 3rem;
+}
+
+.link-btn {
+    color: white;
+    text-decoration: none;
+}
+
+.btn {
+    transition: background 0.2s;
+    font-size: 1.5rem;
+    padding: 20px;
+    color: var(--green);
+    border: 2px solid var(--green);
+}
+
+.btn:hover {
+    background: var(--green);
+    color: black;
+}

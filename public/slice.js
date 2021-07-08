@@ -13,7 +13,7 @@ function setup() {
 
 function draw() {
     fill(0);
-    arc(width / 2, height / 2, width, height, 0, 2 * PI / size);
+    arc(width / 2, height / 2, width, height, -2 * PI / size, 0);
     let arcMask = get();
     clear();
     img.mask(arcMask);

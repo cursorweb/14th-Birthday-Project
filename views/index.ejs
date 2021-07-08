@@ -1,9 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <%- include("temp/head", { title: "It's my Birthday!" }); %>
+    <%- include("temp/head", { title: "Coder100's Birthday" }); %>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    
+    <div class="heading-box">
+        <div class="title">Coder100's Birthday</div>
+        <div class="subtitle">Celebration Project!!</div>
+        <!-- <div class="title">Portfolia try 2</div>
+        <div class="subtitle">Crapp Coder</div> -->
+
+        <% if (username) { %>
+            <a href="/cards" class="btn link-btn">Dashboard</a>
+        <% } else { %>
+            <a href="/login" class="btn link-btn">Log In</a>
+        <% } %>
+    </div>
+
+    <%- include("temp/footer"); %>
 </body>
 </html>

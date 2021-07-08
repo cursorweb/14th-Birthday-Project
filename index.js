@@ -20,7 +20,7 @@ app.use((req, res, next) => {
 app.use(express.static(__dirname + "/public"));
 
 // Views
-app.get("/", (req, res) => {
+app.get("/", (_, res) => {
     res.render("index");
 });
 
