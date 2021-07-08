@@ -1,14 +1,17 @@
 :root {
     --background: #1d262e;
+    --light: #323b44;
+    
     --primary: #6198cf;
-    --secondary: #74899e;
-    --text: #7b848d;
+    --secondary: #768fa8;
+    --text: #7d848b;
 
     --green: #66d134;
-    --red: blue;
+    --darkblue: #315170;
 }
 
 body {
+    margin: 0;
     background: var(--background);
     color: var(--text);
     font-family: 'Work Sans', sans-serif;
@@ -20,24 +23,72 @@ body {
     color: var(--primary);
 }
 
+.header {
+    font-size: 3rem;
+    font-weight: 400;
+    color: var(--secondary);
+}
+
 .subtitle {
+    font-weight: 800;
+    color: var(--primary);
     font-size: 3rem;
 }
 
 .link-btn {
+    display: inline-block;
     color: white;
     text-decoration: none;
 }
 
+
 .btn {
+    cursor: pointer;
+
+    background: none;
+    outline: 0;
+    border-radius: 0;
+
     transition: background 0.2s;
-    font-size: 1.5rem;
-    padding: 20px;
     color: var(--green);
-    border: 2px solid var(--green);
+
+    font-size: 1rem;
+    padding: 10px;
+    border: 1px solid var(--green);
 }
 
 .btn:hover {
     background: var(--green);
     color: black;
+}
+
+.btn-blue {
+    border: solid var(--darkblue);
+}
+
+.btn-blue:hover {
+    background: var(--darkblue)!important;
+}
+
+.btn-big {
+    font-size: 1.5rem;
+    padding: 20px;
+    border-width: 2px;
+}
+
+
+.center {
+    text-align: center;
+}
+
+.margin {
+    margin: 18px 0;
+}
+
+.spacing {
+    height: 40px;
+}
+
+.padding {
+    margin: 8px;
 }

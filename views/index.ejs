@@ -5,16 +5,41 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <div class="heading-box">
+    <div class="box">
         <div class="title">Coder100's Birthday</div>
         <div class="subtitle">Celebration Project!!</div>
         <!-- <div class="title">Portfolia try 2</div>
         <div class="subtitle">Crapp Coder</div> -->
 
         <% if (username) { %>
-            <a href="/cards" class="btn link-btn">Dashboard</a>
+            <a href="/cards" class="btn btn-big link-btn">Dashboard</a>
         <% } else { %>
-            <a href="/login" class="btn link-btn">Log In</a>
+            <a href="/login" class="btn btn-big link-btn">Log In</a>
+        <% } %>
+        
+        <div class="spacing"></div>
+        <div class="circle"><i class="fas fa-chevron-down"></i></div>
+    </div>
+
+    <div class="box light">
+        <div class="title">How it works</div>
+        <div class="subtitle">Cookieee</div>
+        <div class="spacing"></div>
+        <div>The <strong>dashboard</strong> button will allow you to create and view birthday cards!</div>
+        <div>Once you make a birthday card, you will get a slice of the big birthday cookie.</div>
+        <div>Demand is high, so each person only gets half of the remaining slices.</div>
+        <div class="spacing"></div>
+        <div class="subtitle">Subdivisions</div>
+        <ol>
+            <li>The first person gets 1/2 of the cookie.</li>
+            <li>The second person gets 1/4 of the cookie.</li>
+            <li>The nth person gets 1/2<sup>n</sup> of the cookie, so be fast!</li>
+        </ol>
+
+        <% if (username) { %>
+            <a href="/cards" class="btn btn-big link-btn">Dashboard</a>
+        <% } else { %>
+            <a href="/login" class="btn btn-big link-btn">Log In</a>
         <% } %>
     </div>
 
