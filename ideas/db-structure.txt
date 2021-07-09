@@ -1,6 +1,6 @@
-latestUser: 1 # print it, and then add 1 to it.
+latestUser: 0 # add then print.
 cards: [{
-    name: "" # serialize
+    name: ""
     content: "" # serialize
 }]
 users: {
