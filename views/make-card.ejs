@@ -2,10 +2,27 @@
 <html lang="en">
 <head>
     <%- include("temp/head", { title: "Make a card!" }); %>
+    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <div class="title">Write a card!</div>
     <div class="subtitle">Write me a card!</div>
+
+    <div class="spacing"></div>
+
+    <div class="center">Write your card below! You have a maximum of 512 characters! Thank you!</div>
+
+    <form action="/create" method="POST">
+        <div class="nav">
+            <textarea name="card" placeholder="Your message here..." class="input" maxlength="512"></textarea>
+        </div>
+
+        <div class="nav margin">
+            <a href="/dash" class="btn link-btn btn-blue"><i class="fas fa-chevron-left"></i> Back</a>
+            <button class="btn">Submit <i class="fas fa-check"></i></button>
+        </div>
+    </form>
 
     <%- include("temp/footer"); %>
 </body>

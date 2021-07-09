@@ -1,0 +1,29 @@
+form {
+    margin: 16px;
+    /* display: flex; */
+    height: 200px;
+}
+
+.input {
+    color: var(--text);
+
+    background: rgba(0, 0, 0, 0.5);
+
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1.1rem;
+
+    border: none;
+    border-radius: 0;
+    resize: vertical;
+    outline: 0;
+
+    padding: 8px;
+
+    transition: box-shadow 0.2s;
+
+    width: 100%;
+}
+
+.input:focus {
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1);
+}

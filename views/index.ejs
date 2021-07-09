@@ -12,9 +12,9 @@
         <div class="subtitle">Crapp Coder</div> -->
 
         <% if (username) { %>
-            <a href="/dash" class="btn btn-big link-btn">Dashboard</a>
+            <a href="/dash" class="btn btn-big link-btn"><i class="fas fa-bars"></i> Dashboard</a>
         <% } else { %>
-            <a href="/login" class="btn btn-big link-btn">Log In</a>
+            <a href="/login" class="btn btn-big link-btn"><i class="fas fa-sign-in-alt"></i> Log In</a>
         <% } %>
         
         <div class="spacing"></div>
@@ -25,9 +25,9 @@
         <%- include("temp/info"); %>
     
         <% if (username) { %>
-            <a href="/dash" class="btn btn-big link-btn">Dashboard</a>
+            <a href="/dash" class="btn btn-big link-btn"><i class="fas fa-bars"></i> Dashboard</a>
         <% } else { %>
-            <a href="/login" class="btn btn-big link-btn">Log In</a>
+            <a href="/login" class="btn btn-big link-btn"><i class="fas fa-sign-in-alt"></i> Log In</a>
         <% } %>
     </div>
     <%- include("temp/footer"); %>
