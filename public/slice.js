@@ -1,5 +1,5 @@
 // todo: configure the slice amount
-let size = slice; // 1 / size
+let size = 2 ** slice; // 1 / size
 let img;
 
 function preload() {
