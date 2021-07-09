@@ -3,12 +3,17 @@
 <head>
     <%- include("temp/head", { title: "Cookie Slice" }); %>
     <script>const slice = <%= slice %>;</script>
+
+    <link rel="stylesheet" href="slice.css">
 </head>
 <body>
     <div class="title">Cookie Slice</div>
     <div class="subtitle">View your cookie!</div>
 
     <div class="canvas"></div>
+
+    <a href="/" class="btn link-btn btn-blue"><i class="fas fa-chevron-left"></i> Back</a>
+    <a href="/cards" class="btn link-btn"><i class="fas fa-th"></i> All Cards</a>
 
     <%- include("temp/footer"); %>
     <script src="p5/p5.min.js"></script>
