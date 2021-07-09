@@ -1,6 +1,11 @@
 const express = require("express");
 const app = express();
 
+const Client = require("@replit/database");
+const db = new Client();
+
+const { serialize, deserialize }  = require("./util");
+
 
 // Setup
 app.set("views", "views");
@@ -24,11 +29,18 @@ app.get("/", (_, res) => {
     res.render("index");
 });
 
-app.get("/login", (req, res) => {
-    res.render("login");
+app.get("/login", (_, res) => {
+    if (res.locals.username) res.redirect("/cards");
+    else res.render("login");
 });
 
-app.use((req, res) => {
+app.get("/cards", (_, res) => {
+    // if (!res.locals.username) res.redirect("/login");
+    // else
+        res.render("cards");
+});
+
+app.use((_, res) => {
     res.status(404).render("404");
 });
 
