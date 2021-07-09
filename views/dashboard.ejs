@@ -2,9 +2,34 @@
 <html lang="en">
 <head>
     <%- include("temp/head", { title: "Dashboard" }); %>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
+    <div class="box">
+        <div class="title">Dashboard</div>
+        <div class="nav">
+            <% if (wroteMessage) { %>
+                <a href="/cookie" class="btn btn-big link-btn">View Cookie</a>
+            <% } else { %>
+                <a href="/create" class="btn btn-big link-btn">Write a Card</a>
+            <% } %>
+            <a href="/cards" class="btn btn-blue btn-big link-btn">All Cards</a>
+        </div>
 
+
+        <div class="spacing"></div>
+        <div class="circle"><i class="fas fa-chevron-down"></i></div>
+    </div>
+
+    <div class="box extended-box light">
+        <%- include("temp/info"); %>
+
+        <% if (wroteMessage) { %>
+            <a href="/cards" class="btn btn-blue btn-big link-btn">All cards</a>
+        <% } else { %>
+            <a href="/create" class="btn btn-blue btn-big link-btn">Write a Card</a>
+        <% } %>
+    </div>
     <%- include("temp/footer"); %>
 </body>
 </html>

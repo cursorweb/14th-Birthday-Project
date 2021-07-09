@@ -7,7 +7,7 @@
     --text: #7d848b;
 
     --green: #66d134;
-    --darkblue: #315170;
+    --lightblue: #3d7aeb;
 }
 
 body {
@@ -66,11 +66,13 @@ body {
 }
 
 .btn-blue {
-    border: solid var(--darkblue);
+    border: solid var(--lightblue);
+    color: var(--lightblue);
 }
 
 .btn-blue:hover {
-    background: var(--darkblue)!important;
+    background: var(--lightblue)!important;
+    color: black;
 }
 
 .btn-big {
