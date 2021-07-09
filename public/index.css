@@ -7,6 +7,10 @@
     height: 100vh;
 }
 
+.extended-box {
+    min-height: 140vh;
+}
+
 .btn {
     margin: 25px 0;
 }

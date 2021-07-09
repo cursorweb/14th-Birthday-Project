@@ -18,18 +18,21 @@ body {
 }
 
 .title {
+    text-align: center;
     font-size: 8rem;
     font-weight: 200;
     color: var(--primary);
 }
 
 .header {
+    text-align: center;
     font-size: 3rem;
     font-weight: 400;
     color: var(--secondary);
 }
 
 .subtitle {
+    text-align: center;
     font-weight: 800;
     color: var(--primary);
     font-size: 3rem;
@@ -91,4 +94,19 @@ body {
 
 .padding {
     margin: 8px;
+}
+
+
+@media only screen and (max-width: 800px) {
+    .title {
+        font-size: 4rem;
+    }
+
+    .header, .subtitle {
+        font-size: 2rem;
+    }
+
+    .btn-big {
+        font-size: 1.1rem;
+    }
 }

@@ -30,7 +30,7 @@ app.get("/", (_, res) => {
 });
 
 app.get("/login", (_, res) => {
-    if (res.locals.username) res.redirect("/cards");
+    if (res.locals.username) res.redirect("/dash");
     else res.render("login");
 });
 
