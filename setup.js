@@ -1,4 +1,4 @@
-#!/bin/env/node
+#!/usr/bin/env node
 const Client = require("@replit/database");
 const db = new Client();
 
