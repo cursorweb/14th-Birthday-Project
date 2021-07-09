@@ -8,7 +8,7 @@
     <div class="box">
         <div class="title">Dashboard</div>
         <div class="nav">
-            <% if (wroteMessage) { %>
+            <% if (message) { %>
                 <a href="/cookie" class="btn btn-big link-btn">View Cookie</a>
             <% } else { %>
                 <a href="/create" class="btn btn-big link-btn">Write a Card</a>
@@ -24,7 +24,7 @@
     <div class="box extended-box light">
         <%- include("temp/info"); %>
 
-        <% if (wroteMessage) { %>
+        <% if (message) { %>
             <a href="/cards" class="btn btn-blue btn-big link-btn">All cards</a>
         <% } else { %>
             <a href="/create" class="btn btn-blue btn-big link-btn">Write a Card</a>

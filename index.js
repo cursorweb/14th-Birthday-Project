@@ -37,7 +37,7 @@ app.get("/login", (_, res) => {
 app.get("/dash", (_, res) => {
     // if (!res.locals.username) res.redirect("/login");
     // else
-    res.render("dashboard", { wroteMessage: false });
+    res.render("dashboard", { message: false });
 });
 
 app.get("/create", (_, res) => {
