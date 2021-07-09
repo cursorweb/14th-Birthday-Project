@@ -1,0 +1,16 @@
+# ~ : after completion
+# ? : if not completion
+# | : options
+
+
+/ -> login -> dashboard
+
+/dashboard -> /makecard ~ /viewcookie
+           -> /allcards
+
+/makecard -> /dashboard | (submit -> /viewcookie)
+
+/allcards -> /dashboard ? /makecard
+# note: also add ability to view cookie
+
+/viewcookie -> /dashboard | /allcards

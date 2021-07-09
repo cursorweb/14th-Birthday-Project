@@ -1,5 +1,8 @@
 latestUser: 1 # print it, and then add 1 to it.
 cards: [{
-    name: "", # serialize
+    name: "" # serialize
     content: "" # serialize
 }]
+users: {
+    [name]: 0
+}
