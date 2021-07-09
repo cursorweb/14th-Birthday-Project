@@ -1,5 +1,5 @@
 // todo: configure the slice amount
-let size = 2; // 1 / size
+let size = slice; // 1 / size
 let img;
 
 function preload() {
@@ -8,7 +8,7 @@ function preload() {
 
 function setup() {
     noStroke();
-    createCanvas(500, 500);
+    createCanvas(500, 500).parent(document.querySelector(".canvas"));
 }
 
 function draw() {

@@ -2,12 +2,16 @@
 <html lang="en">
 <head>
     <%- include("temp/head", { title: "Cookie Slice" }); %>
+    <script>const slice = <%= slice %>;</script>
 </head>
 <body>
     <div class="title">Cookie Slice</div>
     <div class="subtitle">View your cookie!</div>
 
+    <div class="canvas"></div>
+
     <%- include("temp/footer"); %>
+    <script src="p5/p5.min.js"></script>
     <script src="slice.js"></script>
 </body>
 </html>

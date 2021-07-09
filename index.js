@@ -90,7 +90,7 @@ app.get("/cookie", async (_, res) => {
         const users = await db.get("users");
 
         if (!users[username]) res.redirect("create");
-        else res.render("cookie-slice", { sliceNumber: users[username] });
+        else res.render("cookie-slice", { slice: users[username] });
     }
 });
 
