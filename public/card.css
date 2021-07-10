@@ -5,10 +5,23 @@
 .card {
     width: 25%;
     height: 500px;
+
     padding: 8px;
-    border-radius: 8px;
-    background: rgba(0, 0, 0, 0.5);
     margin: 8px;
+
+    border-radius: 8px;
+
+    background: rgba(0, 0, 0, 0.5);
+
+    text-align: center;
+    
+    cursor: pointer;
+
+    transition: box-shadow 0.2s;
+}
+
+.card:hover {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
 }
 
 .card-title {
