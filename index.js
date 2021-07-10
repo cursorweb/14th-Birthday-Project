@@ -4,7 +4,7 @@ const app = express();
 const Client = require("@replit/database");
 const db = new Client();
 
-const { serialize, deserialize } = require("./util");
+const { serialize, deserialize, readCookie } = require("./util");
 
 
 // Setup
@@ -16,7 +16,7 @@ app.use(express.urlencoded({ extended: false }));
 
 // Log in with repl.it
 app.use((req, res, next) => {
-    res.locals.username = req.header("x-replit-user-name");
+    res.locals.username = req.header("x-replit-user-name") || `${readCookie(req.headers.cookie, "username")} (guest)`;
     next();
 });
 

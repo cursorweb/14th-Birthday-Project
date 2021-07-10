@@ -16,10 +16,16 @@ button.addEventListener("click", () => {
 
     function authComplete(e) {
         if (e.data != "auth_complete") return;
-        
+
         window.removeEventListener("message", authComplete);
 
         authWindow.close();
         location.reload();
     }
+});
+
+document.querySelector(".guest").addEventListener("click", () => {
+    const username = document.querySelector(".username").value || "Anon";
+    document.cookie = `username=${encodeURIComponent(username)}; max-age=${30 * 24 * 60 * 60}`;
+    location.reload();
 });
