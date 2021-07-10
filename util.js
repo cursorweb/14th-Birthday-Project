@@ -7,6 +7,8 @@ module.exports.deserialize = text => {
 };
 
 module.exports.readCookie = (str, key) => {
+    if (!str) return;
+
     const split = str.split("; ");
     const kv = {};
     split.forEach(k => {

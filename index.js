@@ -16,7 +16,14 @@ app.use(express.urlencoded({ extended: false }));
 
 // Log in with repl.it
 app.use((req, res, next) => {
-    res.locals.username = req.header("x-replit-user-name") || `${readCookie(req.headers.cookie, "username").slice(0, 20)} (guest)`;
+    let header = req.header("x-replit-user-name");
+    let cookie = readCookie(req.headers.cookie, "username");
+    
+    if (!header && cookie) {
+        header = `${cookie} (guest)`;
+    }
+
+    res.locals.username = header;
     next();
 });
 
