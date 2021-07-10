@@ -2,17 +2,20 @@
 <html lang="en">
 <head>
     <%- include("temp/head", { title: "Cards" }); %>
+    <link rel="stylesheet" href="card.css">
 </head>
 <body>
     <div class="title">Cards</div>
     <div class="subtitle">Birthday Cards!</div>
 
-    <% cards.forEach(card => { %>
-        <div class="card">
-            <div class="card-title"><%= card.name %></div>
-            <div class="card-content"><%= card.content %></div>
-        </div>
-    <% }); %>
+    <div class="cards">
+        <% cards.forEach(card => { %>
+            <div class="card">
+                <div class="card-title"><%= card.name %></div>
+                <div class="card-content"><%= card.content %></div>
+            </div>
+        <% }); %>
+    </div>
 
     <%- include("temp/footer"); %>
     <script src="user-slice.js"></script>

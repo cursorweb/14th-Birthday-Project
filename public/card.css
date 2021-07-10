@@ -1,0 +1,17 @@
+.cards {
+    display: flex;
+}
+
+.card {
+    width: 25%;
+    height: 500px;
+    padding: 8px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.card-title {
+    font-size: 3rem;
+    font-weight: bolder;
+    color: var(--secondary);
+}
