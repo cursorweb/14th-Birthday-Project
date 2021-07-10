@@ -16,7 +16,7 @@ app.use(express.urlencoded({ extended: false }));
 
 // Log in with repl.it
 app.use((req, res, next) => {
-    res.locals.username = req.header("x-replit-user-name") || `${readCookie(req.headers.cookie, "username")} (guest)`;
+    res.locals.username = req.header("x-replit-user-name") || `${readCookie(req.headers.cookie, "username").slice(0, 20)} (guest)`;
     next();
 });
 
@@ -79,7 +79,10 @@ app.post("/create", async (req, res) => {
 
 app.get("/cards", (_, res) => {
     if (!res.locals.username) res.redirect("/login");
-    else res.render("cards");
+    else {
+        const cards = await db.get("cards");
+        res.render("cards", { cards });
+    }
 });
 
 app.get("/cookie", async (_, res) => {
