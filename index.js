@@ -18,7 +18,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use((req, res, next) => {
     let header = req.header("x-replit-user-name");
     let cookie = readCookie(req.headers.cookie, "username");
-    
+
     if (!header && cookie) {
         header = `${cookie} (guest)`;
     }
@@ -84,10 +84,13 @@ app.post("/create", async (req, res) => {
     }
 });
 
-app.get("/cards", (_, res) => {
+app.get("/cards", async (_, res) => {
     if (!res.locals.username) res.redirect("/login");
     else {
-        const cards = await db.get("cards");
+        const cards = (await db.get("cards")).map(c => ({
+            name: c.name,
+            content: deserialize(c.content)
+        }));
         res.render("cards", { cards });
     }
 });

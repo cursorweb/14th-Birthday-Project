@@ -1,9 +1,9 @@
 module.exports.serialize = text => {
-    return encodeURIComponent(JSON.stringify(text));
+    return JSON.stringify(text);
 };
 
 module.exports.deserialize = text => {
-    return decodeURIComponent(JSON.parse(text));
+    return JSON.parse(text);
 };
 
 module.exports.readCookie = (str, key) => {
