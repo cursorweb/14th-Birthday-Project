@@ -43,8 +43,6 @@ form {
     padding: 10px;
 
     transition: box-shadow 0.2s;
-
-    width: 100%;
 }
 
 .text:focus {
