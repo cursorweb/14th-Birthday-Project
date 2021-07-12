@@ -1,0 +1,36 @@
+const modal = document.querySelector(".modal");
+const canvas = document.querySelector(".canvas");
+
+document.querySelectorAll("button").forEach(el => {
+    modal.style.display = "block";
+    el.addEventListener("click", () => {
+        const sliceNumber = Number(el.getAttribute("data-num")) + 1;
+        new p5(p => {
+            let img;
+            let size = 2 ** sliceNumber;
+
+            p.preload = () => {
+                img = p.loadImage("cookie.png");
+            }
+
+            p.setup = () => {
+                noStroke();
+                p.createCanvas(500, 500).parent(canvas);
+            }
+
+            p.draw = () => {
+                p.fill(0);
+                p.arc(p.width / 2, p.height / 2, p.width, p.height, -2 * p.PI / size, 0);
+                let arcMask = p.get();
+                p.clear();
+                img.mask(arcMask);
+                p.image(img, 0, 0, p.width, p.height);
+            }
+        });
+    });
+});
+
+document.querySelectorAll(".close").addEventListener(() => {
+    modal.style.display = "none";
+    canvas.innerHTML = "";
+});

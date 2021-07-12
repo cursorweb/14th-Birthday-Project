@@ -8,16 +8,35 @@
     <div class="title">Cards</div>
     <div class="subtitle">Birthday Cards!</div>
 
+    <div class="spacing"></div>
+    <div class="margin">Click on a card to view their cookie!</div>
+    <div class="spacing"></div>
+
     <div class="cards">
-        <% cards.forEach(card => { %>
-            <div class="card">
+        <% cards.forEach((card, i) => { %>
+            <div class="card" data-num="<%= i %>">
                 <div class="card-title"><%= card.name %></div>
                 <div class="card-content"><%= card.content %></div>
             </div>
         <% }); %>
     </div>
 
+    <div class="nav margin">
+        <a href="/dash" class="btn link-btn btn-blue"><i class="fas fa-chevron-left"></i> Back</a>
+        <% if (message) { %>
+            <a href="/cookie" class="btn btn-blue btn-big link-btn"><i class="fas fa-th"></i> Your Cookie</a>
+        <% } else { %>
+            <a href="/create" class="btn btn-blue btn-big link-btn"><i class="fas fa-pencil-alt"></i> Write a Card</a>
+        <% } %>
+    </div>
+
+    <div class="modal">
+        <div class="close">&times;</div>
+        <div class="canvas"></div>
+    </div>
+
     <%- include("temp/footer"); %>
+    <script src="p5/p5.min.js"></script>
     <script src="user-slice.js"></script>
 </body>
 </html>
