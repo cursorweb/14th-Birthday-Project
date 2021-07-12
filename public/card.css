@@ -57,7 +57,7 @@
     padding: 8px;
     border-radius: 4px;
 
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.1);
 }
 
 .close:hover {
