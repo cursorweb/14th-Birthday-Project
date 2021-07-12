@@ -1,0 +1,85 @@
+.confetti-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.hover {
+    position: absolute;
+}
+
+.confetti {
+    position: absolute;
+    width: 15px;
+    height: 5px;
+    animation-fill-mode: forwards;
+}
+
+.confetti-0 {
+    background: rgb(255, 63, 63);
+    animation: rotate1 0.5s;
+}
+
+.confetti-1 {
+    background: rgb(42, 141, 255);
+    animation: rotate2 0.5s;
+}
+
+.confetti-2 {
+    background: rgb(39, 211, 39);
+    animation: rotate3 0.5s;
+}
+
+@keyframes rotate1 {
+    from {
+        opacity: 1;
+        transform: rotate(0deg);
+        left: 0;
+        top: 0;
+    }
+    
+    to {
+        opacity: 0;
+        left: 20px;
+        top: 20px;
+        transform: rotate(45deg);
+    }
+}
+
+@keyframes rotate2 {
+    from {
+        opacity: 1;
+        transform: rotate(0deg);
+        left: 0;
+        top: 0;
+    }
+
+    to {
+        opacity: 0;
+        left: -20px;
+        top: 20px;
+        transform: rotate(-45deg);
+    }
+}
+
+@keyframes rotate3 {
+    0% {
+        opacity: 1;
+        transform: rotate(0deg);
+        left: 0;
+        top: 0;
+    }
+
+    50% {
+        top: -10px;
+    }
+
+    100% {
+        opacity: 0;
+        top: 20px;
+        transform: rotate(-90deg);
+    }
+}
