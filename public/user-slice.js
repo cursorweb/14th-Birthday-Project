@@ -1,4 +1,4 @@
-const modal = document.querySelector(".modal");
+const modal = document.querySelector(".modal-cont");
 const canvas = document.querySelector(".canvas");
 
 document.querySelectorAll(".card").forEach(el => {
