@@ -14,7 +14,7 @@ document.querySelectorAll(".card").forEach(el => {
             }
 
             p.setup = () => {
-                noStroke();
+                p.noStroke();
                 p.createCanvas(500, 500).parent(canvas);
             }
 
@@ -30,7 +30,7 @@ document.querySelectorAll(".card").forEach(el => {
     });
 });
 
-document.querySelector(".close").addEventListener(() => {
+document.querySelector(".close").addEventListener("click", () => {
     modal.style.display = "none";
     canvas.innerHTML = "";
 });
