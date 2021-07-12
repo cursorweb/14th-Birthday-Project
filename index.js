@@ -68,9 +68,11 @@ app.post("/create", async (req, res) => {
     else {
         const text = serialize(req.body.card.replace(/\r?\n/g, " "));
 
+        let users = await db.get("users");
+        if (users[username]) return res.redirect("/cookie");
+
         let latestUser = await db.get("latestUser");
         let cards = await db.get("cards");
-        let users = await db.get("users");
 
         latestUser++;
         cards.push({ name: username, content: text });
@@ -85,13 +87,18 @@ app.post("/create", async (req, res) => {
 });
 
 app.get("/cards", async (_, res) => {
-    if (!res.locals.username) res.redirect("/login");
+    const username = res.locals.username;
+    if (!username) res.redirect("/login");
     else {
+        const users = await db.get("users");
         const cards = (await db.get("cards")).map(c => ({
             name: c.name,
             content: deserialize(c.content)
         }));
-        res.render("cards", { cards });
+        res.render("cards", {
+            cards,
+            message: users[username]
+        });
     }
 });
 
