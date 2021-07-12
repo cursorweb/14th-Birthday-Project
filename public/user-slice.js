@@ -1,7 +1,7 @@
 const modal = document.querySelector(".modal");
 const canvas = document.querySelector(".canvas");
 
-document.querySelectorAll("button").forEach(el => {
+document.querySelectorAll(".card").forEach(el => {
     modal.style.display = "block";
     el.addEventListener("click", () => {
         const sliceNumber = Number(el.getAttribute("data-num")) + 1;
