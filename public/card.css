@@ -46,6 +46,19 @@
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
 }
 
+.canvas {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.canvas, .canvas canvas {
+    pointer-events: none;
+}
+
 .close {
     cursor: pointer;
 
