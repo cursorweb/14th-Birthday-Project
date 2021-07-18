@@ -1,10 +1,12 @@
 .cards {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .card {
     width: 25%;
     height: 250px;
+    overflow: auto;
 
     padding: 8px;
     margin: 8px;
@@ -27,12 +29,14 @@
 .card-title {
     font-size: 3rem;
     font-weight: bolder;
+    word-break: break-all;
+
     color: var(--secondary);
 }
 
 
 .modal-cont {
-    position: absolute;
+    position: fixed;
     background: rgba(0, 0, 0, 0.5);
     left: 0;
     top: 0;
